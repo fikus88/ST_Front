@@ -1,0 +1,222 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+body {
+  padding: 60px 0px;
+  background-color: rgb(220, 220, 220);
+}
+
+.top {
+  margin-top : 20px;
+}
+
+.center  {
+  float: none;
+  margin: 0 auto;
+
+}
+
+.dark {
+  background-color: #2b2d30;
+}
+.serial-list {
+  list-style: none;
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  width: 120%;
+}
+.serial-list > li {
+  background-color: #2b2d30;
+  border-left: 1px solid darkorange;
+  border-bottom: 1px solid darkorange;
+  box-shadow: 0px 0px 7px darkorange;
+  box-shadow: 0px 0px 7px darkorange;
+  padding: 0px;
+  margin: 0px 0px 20px;
+  height: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.serial-list > li > time {
+  display: inline-block;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: #2b2d30;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.serial-list > li:nth-child(even) > time {
+  background-color: #2b2d30;
+}
+.serial-list > li > time > span {
+  display: none;
+}
+.serial-list > li > time > .day {
+  display: block;
+  font-size: 56pt;
+  font-weight: 100;
+  line-height: 1;
+}
+.serial-list > li time > .month {
+  display: block;
+  font-size: 24pt;
+  font-weight: 900;
+  line-height: 1;
+}
+.serial-list > li > img {
+
+}
+.serial-list > li > .info {
+  padding-top: 5px;
+  text-align: center;
+}
+.serial-list > li > .info > .title {
+  font-size: 17pt;
+  font-weight: 700;
+  margin: 0px;
+}
+.serial-list > li > .info > .desc {
+  font-size: 13pt;
+  font-weight: 300;
+  margin: 0px;
+}
+.serial-list > li > .info > ul,
+.serial-list > li > .social > ul {
+  display: table;
+  list-style: none;
+  margin: 10px 0px 0px;
+  padding: 0px;
+  width: 100%;
+  text-align: center;
+}
+.serial-list > li > .social > ul {
+  margin: 0px;
+}
+.serial-list > li > .info > ul > li,
+.serial-list > li > .social > ul > li {
+  display: table-cell;
+  cursor: pointer;
+  color: rgb(30, 30, 30);
+  font-size: 11pt;
+  font-weight: 300;
+  padding: 3px 0px;
+}
+.serial-list > li > .info > ul > li > a {
+  display: block;
+  width: 100%;
+  color: rgb(30, 30, 30);
+  text-decoration: none;
+}
+.serial-list > li > .social > ul > li {
+  padding: 0px;
+}
+.serial-list > li > .social > ul > li > a {
+  padding: 3px 0px;
+}
+.serial-list > li > .info > ul > li:hover,
+.serial-list > li > .social > ul > li:hover {
+  color: rgb(30, 30, 30);
+  background-color: #2b2d30;
+}
+.add a,
+.view a {
+
+  color:darkorange;
+}
+
+.view {
+  color: rgb(221, 75, 57) !important;
+}
+.add:hover a {
+  color: #2b2d30 !important;
+  background-color: darkorange !important;
+}
+
+.view:hover a {
+  color: #2b2d30 !important;
+  background-color: darkorange !important;
+}
+
+@media (min-width: 768px) {
+  .serial-list > li {
+    position: relative;
+    display: block;
+    padding: 0px;
+
+  }
+
+
+  .serial-list > li > time,
+  .serial-list > li > img  {
+    display: inline-block;
+  }
+  .serial-list > li > time,
+  .serial-list > li > img {
+
+    float: left;
+  }
+  .serial-list > li > .info {
+    background-color: #2b2d30;
+    overflow: hidden;
+  }
+  .serial-list > li > time,
+  .serial-list > li > img {
+   width:35%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .serial-list > li > .info {
+    position: relative;
+    height: 100%;
+    text-align: left;
+    padding-right: 40px;
+  }
+  .serial-list > li > .info > .title,
+  .serial-list > li > .info > .desc {
+    padding: 0px 10px;
+  }
+  .serial-list > li > .info > ul {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+  .serial-list > li > .social {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    width: 120px;
+  }
+  .serial-list > li > .social > ul {
+    border-left: 1px solid darkorange;
+    border-bottom: 1px solid darkorange;
+    box-shadow: 0px 0px 7px darkorange;
+    box-shadow: 0px 0px 7px darkorange;
+  }
+  .serial-list > li > .social > ul > li {
+    display: block;
+    padding: 0px;
+  }
+  .serial-list > li > .social > ul > li > a {
+    display: block;
+    padding: 10px 0px 9px;
+  }
+
+}
+
+.summary::-webkit-scrollbar {
+  display: none;
+}
+
+.serial-list > li:hover {
+  cursor: pointer;
+  border-color: #fff513;
+  background-color: #2b2d30;
+  border-left: 1px solid #fff513;
+  border-bottom: 1px solid #fff513;
+  box-shadow: 0px 0px 7px #fff513;
+  box-shadow: 0px 0px 7px #fff513;
+}

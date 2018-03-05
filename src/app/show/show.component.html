@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="{{Show[0].show.image.original}}" /></div>
+                    </div>
+
+                </div>
+                <div class="details col-md-6">
+                    <div class="panel panel-default text-center">
+                        <h3>
+                            <div class="panel-title"><span class="glyphicon glyphicon-list-alt"></span> Name</div>
+                        </h3>
+                        <hr>
+                        <h4>{{Show[0].show.name}}</h4>
+                    </div>
+                    <div class="panel panel-default text-center">
+                        <div class="rating">
+                            <h3>
+                                <div class="panel-title"><span class="glyphicon glyphicon-info-sign"></span> Genres</div>
+                            </h3>
+                            <hr>
+                            <h4 style="font-size: 14px;">{{Show[0].show.genres}}</h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default text-center">
+                        <h3>
+                            <div class="panel-title"><span class="glyphicon glyphicon-comment"></span>Summary</div>
+                        </h3>
+                        <hr>
+                        <h4 [innerHTML]="Show[0].show.summary" style="font-size: 12px;"></h4>
+                    </div>
+
+
+                    <div class="text-center">
+                        <button class="add-to-cart btn btn-default" type="button"><span class="glyphicon glyphicon-gift"></span> Add to favourites</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>

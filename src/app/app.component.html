@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-dark bg-inverse navbar-override">
+  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+  <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+    <a class="navbar-brand title-color" routerLink="/main" routerLinkActive="active">Serial Tracker</a>
+      <A>Track your serials with ease</A>
+    <ul class="nav navbar-nav float-xs-right ">
+     <li><app-search *ngIf="auth.loggedIn()"></app-search></li>
+      <li><button class="btn btn-primary btn-margin" routerLink="/profile" routerLinkActive="active" *ngIf="auth.loggedIn()">My Profile</button></li>
+      <li><button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.loggedIn()">Log In</button></li>
+      <li><button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.loggedIn()">Log Out</button></li>
+
+    </ul>
+
+
+  </div>
+</nav>
+
+<div *ngIf="!auth.loggedIn()" style="height:100%" >
+  <img style="width:80%; height: 80vh !important; position: center;margin:0 auto; display: block"
+       src="http://www.abouttvseries.gr/wp-content/uploads/2012/09/abouttvseries_15_new_shows.jpg" />
+</div>
+<div *ngIf="auth.loggedIn()">
+<router-outlet></router-outlet>
+</div>
+
+
+
+
+

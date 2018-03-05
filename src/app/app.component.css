@@ -1,0 +1,71 @@
+.navbar-override {
+  border-bottom : 1px solid darkorange;
+
+}
+.not-active-override {
+  margin : 0px 30px 0px 30px;
+}
+
+.active-override {
+  background-color: #606368 ;
+  padding : 0px 10px 0px 10px;
+
+
+}
+
+.title-color {
+  color : darkorange;
+}
+
+li {
+  text-decoration: none;
+  color : #d3d9e2;
+  margin-top : 1%;
+  display: inline-block;
+}
+
+a {
+  color : inherit;
+  transition: color 0.5s ease;
+  display:inline-block;
+}
+
+a:active {
+  text-decoration: inherit;
+  color : darkorange;
+
+}
+
+.btn:hover {
+  text-decoration: inherit;
+  color : white;
+}
+
+a:not(:hover) {
+  text-decoration: none;
+}
+
+li:active { text-decoration: none;
+}
+
+li:hover {
+  text-decoration: none;
+}
+
+li:not(:hover) {
+  text-decoration: none;
+}
+
+.btn {
+  color: darkorange;
+  background-color: #373a3c!important ;
+  border-color: #373a3c!important ;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+
+
+
