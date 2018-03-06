@@ -21,12 +21,12 @@ export class ShowComponent implements OnInit {
 
   ngOnInit() {
       this.sub = this.route.params.subscribe(params => {
-          this.id = +params['id'];
+          this.id = params['id'];
 
           this.shared.subscribe(shows => this.AllSearchedShows = shows);
 
           this.Show =  this.s.transform(this.AllSearchedShows,this.id);
-          console.log(this.Show)
+          //console.log(this.Show)
       });
 
 

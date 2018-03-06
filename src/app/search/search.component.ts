@@ -1,10 +1,10 @@
-import {Component, OnInit, Output, EventEmitter, OnChanges} from '@angular/core';
-import {SearchService} from "../services/search.service";
+import { Component, OnInit, Output, EventEmitter, OnChanges } from '@angular/core';
+import { SearchService } from "../services/search.service";
 import { Input } from '@angular/core'
 import { Router } from '@angular/router'
-import {SharedDataService} from "../services/sharedData.service";
+import { SharedDataService } from "../services/sharedData.service";
 import { Object } from '../models/SerialModel'
-import {deserialize} from "json-typescript-mapper";
+import { deserialize } from "json-typescript-mapper";
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -14,24 +14,29 @@ import {deserialize} from "json-typescript-mapper";
 export class SearchComponent implements OnChanges {
 
 
-  result_arr : Object[];
-  constructor( private searchService: SearchService, private router: Router, private shared : SharedDataService) { }
+  result_arr: Object[];
+  constructor(private searchService: SearchService, private router: Router, private shared: SharedDataService) { }
 
 
 
 
-  OnSearch(val:string)  {
+  OnSearch(val: string) {
 
-    this.searchService.Service_search(val).subscribe(data => this.result_arr = data);
+    this.searchService.Service_search(val).subscribe(
+      data => {
+      this.result_arr = data;
+        this.shared.next(this.result_arr);
+        this.router.navigateByUrl('/search');
+      });
 
-    this.shared.next(this.result_arr);
-    this.router.navigateByUrl('/search');
+    ;
+   
   }
 
   ngOnChanges() {
 
 
-}
+  }
 
 
 
